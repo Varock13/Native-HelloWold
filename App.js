@@ -4,7 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello Wold!</Text>
+      <Text style={[styles.welcome, {backgroundColor: 'blue'}, {color: 'white'}, {flex: 1}]}></Text>
+      <Text style={[styles.welcome, {backgroundColor: 'white'}, {flex: 1}]}></Text>
+      <Text style={[styles.welcome, {backgroundColor: 'red'}, {flex: 3}]}></Text>
+      <Text style={[styles.welcome, {backgroundColor: 'white'}, {flex: 1}]}></Text>
+      <Text style={[styles.welcome, {backgroundColor: 'blue'}, {color: 'white'}, {flex: 1}]}></Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    flexDirection: 'row',
+    alignItems: 'stretch',
     justifyContent: 'center',
+    //backgroundColor: 'orange',
+    margin: 10,
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    //margin: 10,
   },
 });
